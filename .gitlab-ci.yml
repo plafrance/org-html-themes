@@ -1,0 +1,14 @@
+image: git.dti.crosemont.quebec:5050/plafrance/emacs-publication:latest
+
+.build: &build
+  script:
+  - emacs --batch -load $HOME/.emacs.el --load publish.el --funcall org-publish-all
+  artifacts:
+    paths:
+    - public
+
+pages:
+  <<: *build
+  only:
+  - master
+
