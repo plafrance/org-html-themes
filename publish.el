@@ -10,13 +10,13 @@
        (list "org"
              :base-directory "org"
              :base-extension 'any
-             :publishing-directory "public"
+             :publishing-directory "public/org"
              :publishing-function 'org-publish-attachment
              :recursive t)
        (list "src"
              :base-directory "src"
              :base-extension 'any
-             :publishing-directory "public"
+             :publishing-directory "public/src"
              :publishing-function 'org-publish-attachment
              :recursive t)
 	   ))
